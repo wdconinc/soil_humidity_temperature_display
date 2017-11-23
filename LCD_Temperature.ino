@@ -67,20 +67,20 @@ void loop() {
 
   // Print the values to the serial port
   Serial.print("Temperature: ");
-  Serial.print(temp_c, DEC);
+  Serial.print(temp_c, 2);
   Serial.print("C / ");
-  Serial.print(temp_f, DEC);
+  Serial.print(temp_f, 2);
   Serial.print("F. Humidity: ");
   Serial.print(humidity);
   Serial.println("%");
 
   // set the cursor to column 0, line 1
   lcd.setCursor(0, 0);
-  lcd.print("temp = "); lcd.print(temp_f); lcd.print(" deg F");
+  lcd.print("temp = "); lcd.print(temp_f,2); lcd.print(" F");
 
   // set the cursor to column 0, line 1
   lcd.setCursor(0, 1);
-  lcd.print("hum = "); lcd.print(humidity); lcd.print(" %");
+  lcd.print("hum = "); lcd.print(humidity,2); lcd.print(" %");
 
   delay(500);
 }
