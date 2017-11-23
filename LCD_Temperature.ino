@@ -82,6 +82,7 @@ void loop() {
   lcd.setCursor(0, 1);
   lcd.print("hum = "); lcd.print(humidity,2); lcd.print(" %");
 
-  delay(500);
+  // wait 5 minutes
+  delay(5*60*1000);
 }
 
