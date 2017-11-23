@@ -49,7 +49,6 @@ LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 // Specify data and clock connections and instantiate SHT1x object
 #define dataPin  12
 #define clockPin 13
-SHT1x sht1x(dataPin, clockPin);
 
 void setup() {
   // set up the LCD's number of columns and rows:
@@ -61,6 +60,7 @@ void setup() {
 
 void loop() {
   // Read values from the sensor
+  SHT1x sht1x(dataPin, clockPin);
   float temp_c = sht1x.readTemperatureC();
   float temp_f = sht1x.readTemperatureF();
   float humidity = sht1x.readHumidity();
